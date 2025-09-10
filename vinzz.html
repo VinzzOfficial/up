@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>i'm Vinzz</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#0f172a; /* dark navy */
+      --glass: rgba(255,255,255,0.06);
+      --accent1:#7c3aed;
+      --accent2:#06b6d4;
+      --card-radius:18px;
+      --max-width:420px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    /* page layout */
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start; /* biar konten mulai dari atas */
+  justify-content: center;
+  background: radial-gradient(1000px 600px at 10% 10%, rgba(124,58,237,0.12), transparent),
+              radial-gradient(800px 500px at 90% 90%, rgba(6,182,212,0.08), transparent),
+              linear-gradient(180deg,var(--bg1) 0%, #071024 100%);
+  overflow-y: auto; /* biar bisa scroll */
+  overflow-x: hidden;
+  color: #e6eef8;
+  padding: 32px;
+}
+
+  .teks {
+      font-size: 20px;   /* ukuran sedang */
+      text-align: center;
+    }
+
+    /* subtle animated orbs */
+    .orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:0.7;animation:float 12s ease-in-out infinite}
+    .orb.one{width:520px;height:520px;left:-120px;top:-80px;background:linear-gradient(135deg,var(--accent1),transparent)}
+    .orb.two{width:420px;height:420px;right:-140px;bottom:-120px;background:linear-gradient(135deg,var(--accent2),transparent);animation-duration:16s}
+    @keyframes float{0%{transform:translateY(0) translateX(0)}50%{transform:translateY(-28px) translateX(18px)}100%{transform:translateY(0) translateX(0)}}
+
+    /* container */
+    .frame{
+      min-height: 100vh;
+      width:100%;
+      max-width:var(--max-width);
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:calc(var(--card-radius) + 6px);
+      padding:28px;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+      position:relative;
+      z-index:2;
+      backdrop-filter: blur(6px) saturate(110%);
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+
+    header{
+      display:flex;gap:14px;align-items:center;margin-bottom:18px
+    }
+    .avatar{
+      width:82px;height:82px;border-radius:18px;overflow:hidden;flex:0 0 82px;border:2px solid rgba(255,255,255,0.06);
+      background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;color:white
+    }
+    .meta h1{margin:0;font-size:18px;font-weight:700}
+    .meta p{margin:2px 0 0;font-size:13px;color:rgba(230,238,248,0.7)}
+
+    /* links */
+    .links{display:flex;flex-direction:column;gap:12px}
+    .link{
+      display:inline-flex;align-items:center;gap:12px;padding:14px 16px;border-radius:12px;text-decoration:none;color:inherit;font-weight:600;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      box-shadow:0 6px 18px rgba(2,6,23,0.45);border:1px solid rgba(255,255,255,0.02);
+      transition: transform .14s ease, box-shadow .14s ease;
+    }
+    .link:hover{transform:translateY(-6px);box-shadow:0 18px 32px rgba(2,6,23,0.6)}
+    .link .icon{width:36px;height:36px;border-radius:10px;display:inline-grid;place-items:center;background:rgba(255,255,255,0.04);flex:0 0 36px}
+    .link .title{flex:1;text-align:left}
+    .link .cta{font-size:12px;opacity:0.85}
+
+    /* small utilities */
+    .utilities{display:flex;gap:8px;align-items:center;margin-top:14px}
+    .btn-ghost{padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;font-weight:600;cursor:pointer}
+
+    footer{margin-top:18px;text-align:center;color:rgba(230,238,248,0.5);font-size:13px}
+
+    /* responsive */
+    @media (max-width:420px){body{padding:20px}.avatar{width:70px;height:70px}}
+  </style>
+</head>
+<body>
+  <div class="orb one" aria-hidden></div>
+  <div class="orb two" aria-hidden></div>
+
+    <main class="frame" role="main" aria-label="Profile links">
+
+    <section class="links" id="links">
+      <!-- Example link buttons: edit href and text below -->
+      <body>
+        <div class="teks">
+          HARGA UP RESS-PT PRIB
+        </div>
+        <text></text>
+        <text>RESS UP ADMIN = 15K</text>
+        <text>RESS UP OWNER = 25K</text>
+        <text>RESS UP PT BIASA = 35K</text>
+        <text>RESS UP PT KIRI = 45K</text>
+        <text>RESS UP PT KANAN = 75K</text>
+        <text>RESS UP PT PRIB = 85K</text>
+      </body>
+      
+      <text></text>
+      
+      <body>
+        <text>ADMIN UP OWNER = 20K</text>
+        <text>ADMIN UP PT BIASA = 30K</text>
+        <text>ADMIN UP PT KIRI = 40K</text>
+        <text>ADMIN UP PT KANAN = 60K</text>
+        <text>ADMIN UP PT PRIB = 70K</text>
+      </body>
+      
+      <text></text>
+      
+      <body>
+        <text>OWNER UP PT BIASA = 20K</text>
+        <text>OWNER UP PT KIRI = 30K</text>
+        <text>OWNER UP PT KANAN = 50K</text>
+        <text>OWNER UP PT PRIB = 60K</text>
+      </body>
+      
+      <text></text>
+      
+      <body>
+        <text>PT BIASA UP PT KIRI = 20K</text>
+        <text>PT KIRI UP PT KANAN = 30K</text>
+        <text>PT KANAN UP PT PRIB = 40K</text>
+      </body>
+      
+      <text></text>
+      
+      <body>
+        <text>PT KIRI UP PT KANAN = 20K</text>
+        <text>PT KANAN UP PT PRIB = 30K</text>
+      </body>
+      
+      <footer>MAU UP SUNG CET ADMIN ↓</footer>
+      <text>-----------------------------------</text>
+      
+      <a class="link" href="#" onclick="openLink(event,'https://wa.me/6283832320022')">
+        <span class="icon">📩</span>
+        <span class="title">WhatSapp</span>
+        <span class="cta">Chat</span>
+      </a>
+      
+      <a class="link" href="#" onclick="openLink(event,'https://benefit.taplink.id')">
+        <span class="icon">🔗</span>
+        <span class="title">Benefit Ress- Pt</span>
+        <span class="cta">Chat</span>
+      </a>
+    </main>
+
+  <script>
+    // Small helpers: open links in new tab and track clicks (simple)
+    function openLink(e, url){
+      e.preventDefault();
+      window.open(url, '_blank');
+    }
+
+    // Copy profile to clipboard
+    document.getElementById('copyBtn').addEventListener('click', async ()=>{
+      const profile = `${location.href}\nVinzzSlayer\nCreator — cek link di bio`;
+      try{
+        await navigator.clipboard.writeText(profile);
+        document.getElementById('copyBtn').textContent = 'Tersalin!';
+        setTimeout(()=> document.getElementById('copyBtn').textContent = 'Salin profil', 1800);
+      }catch(err){
+        alert('Gagal menyalin — silakan salin manual.');
+      }
+    });
+
+    // Simple edit modal using prompt (for quick customization)
+    function openEditor(){
+      const newName = prompt('Ubah nama (kosong = tidak berubah):', document.getElementById('name').textContent);
+      if(newName) document.getElementById('name').textContent = newName;
+      const newBio = prompt('Ubah bio singkat (kosong = tidak berubah):', document.getElementById('bio').textContent);
+      if(newBio) document.getElementById('bio').textContent = newBio;
+    }
+
+    // If you want to replace avatar with an image, call setAvatar(url)
+    function setAvatar(url){
+      const a = document.getElementById('avatar');
+      a.style.background = 'transparent';
+      a.innerHTML = '';
+      const img = document.createElement('img');
+      img.src = url;
+      img.alt = 'avatar';
+      img.style.width = '100%';img.style.height='100%';img.style.objectFit='cover';img.style.borderRadius='14px';
+      a.appendChild(img);
+    }
+
+    // Helpful: allow quick editing of link list from prompt (add/remove)
+    // Not secure — only for local quick edits
+    window.addEventListener('keydown', (e)=>{
+      if(e.key === 'e' && (e.ctrlKey || e.metaKey)){
+        e.preventDefault();
+        quickLinksEditor();
+      }
+    });
+
+    function quickLinksEditor(){
+      const raw = prompt('Masukkan links cepat (format: "Label|URL", satu per baris):', 'Instagram|https://instagram.com/vinzzslayer');
+      if(!raw) return;
+      const lines = raw.split('\n').map(s=>s.trim()).filter(Boolean);
+      const container = document.getElementById('links');
+      container.innerHTML = '';
+      for(const line of lines){
+        const [label, href] = line.split('|').map(x=>x.trim());
+        const a = document.createElement('a');
+        a.className = 'link';
+        a.href = '#';
+        a.onclick = (e)=>openLink(e, href || '#');
+        a.innerHTML = `<span class="icon">🔗</span><span class="title">${label || href}</span><span class="cta">Buka</span>`;
+        container.appendChild(a);
+      }
+    }
+  </script>
+</body>
+</html>
